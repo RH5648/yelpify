@@ -1,6 +1,0 @@
-*.ipynb_checkpoints/
-*__pycache__*
-*.pyc
-*pytest_cache
-.vscode
-collaborative_filtering_surprise.ipynb
