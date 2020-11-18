@@ -68,7 +68,7 @@ What is does: find most recommended users for existing businesses
 Input: business_id(str), k(integer)  
 Output: list of user_id (list of str)  
 
-### nteractions
+### Interactions
 			IF is_new_business(business_id):
 				return predict_new_businesses(business_id, k)
 			ELSE:
