@@ -1,4 +1,4 @@
 # Yelpify
-https://travis-ci.com/RH5648/yelpify.svg?branch=main
+[![Build Status](https://travis-ci.com/RH5648/yelpify.svg?branch=main)](https://travis-ci.com/RH5648/yelpify)[![Build Status](https://travis-ci.com/RH5648/yelpify.svg?branch=main)](https://travis-ci.com/RH5648/yelpify)
 
 projects for cse 583
