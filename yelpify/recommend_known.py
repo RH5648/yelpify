@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-# function to make prediction for known users
+# function to make prediction for known items
 def recommend_known_item(model, interactions, item_id, user_dict, item_dict, topn, show=True):
     """
     Funnction to produce a list of top N interested users for a given item
