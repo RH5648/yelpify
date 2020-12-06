@@ -1,8 +1,34 @@
+"""
+NAME
+    data_preparation
+
+DESCRIPTION
+    This module provides access to functions that prepare data and generate features as needed.
+
+FUNCTIONS
+    get_input(url)
+        Return the dataframe as downloaded from the url.
+
+    prepare_data()
+        Return the joined and cleaned dataset.
+
+    round_of_rating(number)
+        Return the number as rounded to the closest half integer
+"""
+
 import pandas as pd
 import numpy as np
 
 def get_input(url):
-    # util function to get input from dropbox
+    """ Utility function to get file from url and read into a dataframe.
+
+    Args:
+        url: the dropbox link from which to download the raw or cleaned data.
+
+    Returns:
+        The dataframe.
+
+    """
     if '.csv' in url:
         return pd.read_csv(url)
     elif '.json' in url:
@@ -12,7 +38,17 @@ def get_input(url):
     else:
         raise NotImplementedError("File type not supported")
 
-def prepare_data(raw=False, round_ratings=False):   
+def prepare_data(raw=False, round_ratings=False):
+    """ Download and read the dataset.
+
+    Args:
+        raw: whether to download raw data or to download cleaned data.
+        round_ratings: whether to perform round of ratings.
+
+    Returns:
+        the cleaned dataframe.
+
+    """
     print('Downloading input data...')
     if raw:
         # read data
@@ -37,6 +73,13 @@ def prepare_data(raw=False, round_ratings=False):
 # feature engineering
 def round_of_rating(number):
     """Round a number to the closest half integer.
+
+    Args:
+        number: input of a number
+
+    Returns: the closest half integer to this number.
+
+    Example:
     >>> round_of_rating(1.3)
     1.5
     >>> round_of_rating(2.6)
@@ -44,6 +87,7 @@ def round_of_rating(number):
     >>> round_of_rating(3.0)
     3.0
     >>> round_of_rating(4.1)
-    4.0"""
+    4.0
 
+    """
     return round(number * 2) / 2

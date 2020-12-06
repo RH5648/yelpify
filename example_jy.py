@@ -21,6 +21,7 @@ rec_list_user = recommend_known_user(
     user_id = USER_ID,
     user_dict = user_dict,
     item_dict = item_dict,
+    new_only = False,
     topn = 10,
     show = True)
 
