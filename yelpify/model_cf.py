@@ -1,3 +1,20 @@
+"""
+NAME
+    model_cf
+
+DESCRIPTION
+    This module provides access to functions that train and evaluate models using
+        collaborative filtering.
+
+FUNCTIONS
+    train_model(df, user_id_col, item_id_col, item_name_col, evaluate)
+        Return the trained model, dataset with user-item interactions, user dictionary
+            and item dictionary.
+
+    evaluate_model(df, user_id_col, item_id_col)
+        Return the auc-roc score of the training and testing sets.
+"""
+
 import pandas as pd
 import numpy as np
 from lightfm import LightFM
@@ -6,7 +23,22 @@ from sklearn.model_selection import train_test_split
 from lightfm.data import Dataset
 
 def train_model(df, user_id_col='user_id', item_id_col='business_id', item_name_col='name_business', evaluate=True):
+    """ Train the model using collaborative filtering.
 
+    Args:
+        df: the input dataframe.
+        user_id_col: user id column.
+        item_id_col: item id column.
+        item_name_col: item name column.
+        evaluate: if evaluate the model performance.
+
+    Returns:
+        model_full: the trained model.
+        df_interactions: dataframe with user-item interactions.
+        user_dict: user dictionary containing user_id as key and interaction_index as value.
+        item_dict: item dictionary containing item_id as key and item_name as value.
+
+    """
     if evaluate:
         print('Evaluating model...')
         evaluate_model(df, user_id_col='user_id', item_id_col='business_id')
@@ -23,7 +55,7 @@ def train_model(df, user_id_col='user_id', item_id_col='business_id', item_name_
     model_full = LightFM(no_components=100, learning_rate=0.05, loss='warp', max_sampled=50)
     model_full.fit(interactions, sample_weight=weights, epochs=10, num_threads=10)
     # mapping
-    user_id_map, user_feature_map, business_id_map, business_feature_map = ds_full.mapping()
+    user_id_map, _, business_id_map, _ = ds_full.mapping()
 
     # data preparation
     df_interactions = pd.DataFrame(weights.todense())
@@ -34,6 +66,19 @@ def train_model(df, user_id_col='user_id', item_id_col='business_id', item_name_
     return model_full, df_interactions, user_dict, item_dict
 
 def evaluate_model(df, user_id_col='user_id', item_id_col='business_id', stratify=None):
+    """ Model evaluation.
+
+    Args:
+        df: the input dataframe.
+        user_id_col: user id column.
+        item_id_col: item id column.
+        stratify: if use stratification.
+
+    Returns:
+        train_auc: training set auc score.
+        test_auc: testing set auc score.
+
+    """
     # model evaluation
     # create test and train datasets
     train, test = train_test_split(df, test_size=0.2, stratify=stratify)
@@ -45,7 +90,7 @@ def evaluate_model(df, user_id_col='user_id', item_id_col='business_id', stratif
     )
     # plugging in the interactions and their weights
     (train_interactions, train_weights) = ds.build_interactions([(x[0], x[1], x[2]) for x in train.values ])
-    (test_interactions, test_weights) = ds.build_interactions([(x[0], x[1], x[2]) for x in test.values ])
+    (test_interactions, _) = ds.build_interactions([(x[0], x[1], x[2]) for x in test.values ])
 
     # model
     model = LightFM(no_components=100, learning_rate=0.05, loss='warp', max_sampled=50)
