@@ -6,7 +6,7 @@ cryptography==3.2.1
 idna==2.10
 joblib==0.17.0
 lightfm==1.15
-mkl-fft==1.2.0
+mkl-fft==1.0.6
 mkl-random==1.1.1
 mkl-service==2.3.0
 numpy==1.19.4
