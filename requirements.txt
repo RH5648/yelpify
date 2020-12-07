@@ -1,7 +1,28 @@
+brotlipy==0.7.0
 certifi==2020.11.8
+cffi @ file:///D:/bld/cffi_1606601395031/work
+chardet @ file:///D:/bld/chardet_1602255508636/work
+cryptography @ file:///D:/bld/cryptography_1604179264939/work
+idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1593328102638/work
+joblib==0.17.0
+lightfm @ file:///D:/bld/lightfm_1601178160013/work
+mkl-fft==1.2.0
+mkl-random==1.1.1
+mkl-service==2.3.0
 numpy==1.19.4
 pandas==1.1.4
+pyarrow==0.15.1
+pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1593275161868/work
+pyOpenSSL @ file:///home/conda/feedstock_root/build_artifacts/pyopenssl_1606535649775/work
+PySocks @ file:///D:/bld/pysocks_1602327034683/work
 python-dateutil==2.8.1
 pytz==2020.4
-six==1.15.0
+requests @ file:///home/conda/feedstock_root/build_artifacts/requests_1605186911681/work
+scikit-learn==0.23.2
+scipy @ file:///C:/bld/scipy_1604304921792/work
+six @ file:///C:/ci/six_1605187374963/work
+threadpoolctl==2.1.0
+urllib3 @ file:///home/conda/feedstock_root/build_artifacts/urllib3_1603125704209/work
+vim==0.0.1
+win-inet-pton @ file:///D:/bld/win_inet_pton_1602260115377/work
 wincertstore==0.2
