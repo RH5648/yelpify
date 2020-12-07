@@ -8,7 +8,7 @@ python:
 branches:
     only:
         - main
-	- hu1
+        - hu1
 
 install:
     - pip install coverage
