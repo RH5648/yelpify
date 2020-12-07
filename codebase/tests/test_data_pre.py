@@ -1,8 +1,6 @@
 import os
 import unittest
 
-import pandas as pd
-
 import codebase
 from yelpify.data_preparation import round_of_rating, prepare_data
 

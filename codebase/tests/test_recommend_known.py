@@ -1,7 +1,6 @@
 import os
 import unittest
 
-import pandas as pd
 
 import codebase
 from yelpify.data_preparation import prepare_data
@@ -12,7 +11,8 @@ data_path = os.path.join(codebase.__path__[0], 'data')
 USER_ID = "qRWzBX1q07ZuPgaTXB_4JA"
 ITEM_ID = "VMPSdoBgJuyS9t_x_caTig"
 
-class test_model(unittest.TestCase):
+
+class TestModel(unittest.TestCase):
 
     def test_train_model(self):
 
@@ -35,12 +35,11 @@ class test_model(unittest.TestCase):
 
     def test_evaluate_model(self):
         df = prepare_data(raw=False)
-        model_full, df_interactions, user_dict, item_dict = train_model(
+        model_full, df_interactions, user_dict, item_dict = evaluate_model(
             df=df,
             user_id_col='user_id',
             item_id_col='business_id',
-            item_name_col='name_business',
-            evaluate=True)
+            stratify=None)
         rec_list_item = recommend_known_item(
             model=model_full,
             interactions=df_interactions,
@@ -50,6 +49,7 @@ class test_model(unittest.TestCase):
             topn=10,
             show=True)
         self.assertEqual(len(rec_list_item), 10)
+
 
 if __name__ == "__main__":
     unittest.main()
