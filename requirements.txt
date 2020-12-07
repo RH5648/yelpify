@@ -21,7 +21,7 @@ scikit-learn==0.23.2
 scipy==1.5.3
 six==1.15.0
 threadpoolctl==2.1.0
-urllib3==11.25.11
+urllib3==1.25.11
 vim==0.0.1
 win-inet-pton==1.1.0
 wincertstore==0.2
