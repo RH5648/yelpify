@@ -4,7 +4,7 @@ import unittest
 
 import codebase
 from yelpify.data_preparation import prepare_data
-from yelpify.model_cf import train_model, evaluate_model
+from yelpify.model_cf import train_model
 from yelpify.recommend_known import recommend_known_user, recommend_known_item
 
 data_path = os.path.join(codebase.__path__[0], 'data')
