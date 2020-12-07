@@ -16,10 +16,12 @@ def prepare_data(raw=False, round_ratings=False):
     print('Downloading input data...')
     if raw:
         # read data
+        # review = get_input('data/yelp_academic_dataset_review_sample.csv')
+        # user = get_input('data/yelp_academic_dataset_user.json')
+        # business = get_input('data/yelp_academic_dataset_business.json')
         review = get_input('https://www.dropbox.com/s/mtln9b6udoydn2h/yelp_academic_dataset_review_sample.csv?dl=1')
         user = get_input('https://www.dropbox.com/s/pngrptljotqm4ds/yelp_academic_dataset_user.json?dl=1')
         business = get_input('https://www.dropbox.com/s/w0wy854u5swrhmc/yelp_academic_dataset_business.json?dl=1')
-
         # join datasets
         review_user = pd.merge(review, user, on = "user_id", how = "left", suffixes=("","_user"))
         review_user_business = pd.merge(review_user, business, on = "business_id", how = "left", suffixes=("","_business"))
