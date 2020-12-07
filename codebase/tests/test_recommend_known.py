@@ -38,8 +38,7 @@ class TestModel(unittest.TestCase):
         model_full, df_interactions, user_dict, item_dict = evaluate_model(
             df=df,
             user_id_col='user_id',
-            item_id_col='business_id',
-            stratify=None)
+            item_id_col='business_id')
         rec_list_item = recommend_known_item(
             model=model_full,
             interactions=df_interactions,
