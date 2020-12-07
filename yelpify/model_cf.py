@@ -5,6 +5,7 @@ from lightfm.evaluation import auc_score, recall_at_k, precision_at_k
 from sklearn.model_selection import train_test_split
 from lightfm.data import Dataset
 
+
 def train_model(df, user_id_col='user_id', item_id_col='business_id', item_name_col='name_business', evaluate=True):
 
     if evaluate:
@@ -33,6 +34,7 @@ def train_model(df, user_id_col='user_id', item_id_col='business_id', item_name_
     item_dict = df.set_index(item_id_col)[item_name_col].to_dict()
     return model_full, df_interactions, user_dict, item_dict
 
+
 def evaluate_model(df, user_id_col='user_id', item_id_col='business_id', stratify=None):
     # model evaluation
     # create test and train datasets
@@ -56,3 +58,4 @@ def evaluate_model(df, user_id_col='user_id', item_id_col='business_id', stratif
     print('Training set AUC: %s' % train_auc)
     test_auc = auc_score(model, test_interactions, num_threads=20).mean()
     print('Testing set AUC: %s' % test_auc)
+    return train_auc, test_auc

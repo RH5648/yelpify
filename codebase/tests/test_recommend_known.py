@@ -15,7 +15,6 @@ ITEM_ID = "VMPSdoBgJuyS9t_x_caTig"
 class TestModel(unittest.TestCase):
 
     def test_train_model(self):
-
         df = prepare_data(raw=False)
         model_full, df_interactions, user_dict, item_dict = train_model(
             df=df,
@@ -35,10 +34,12 @@ class TestModel(unittest.TestCase):
 
     def test_evaluate_model(self):
         df = prepare_data(raw=False)
-        model_full, df_interactions, user_dict, item_dict = evaluate_model(
+        model_full, df_interactions, user_dict, item_dict = train_model(
             df=df,
             user_id_col='user_id',
-            item_id_col='business_id')
+            item_id_col='business_id',
+            item_name_col='name_business',
+            evaluate=True)
         rec_list_item = recommend_known_item(
             model=model_full,
             interactions=df_interactions,
