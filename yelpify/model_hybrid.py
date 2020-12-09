@@ -2,14 +2,14 @@
 NAME
     model_hybrid
 DESCRIPTION
-    This module provides access to functions that train and evaluate models using
-        hybrid filtering.
+    This module provides access to functions that train and evaluate
+        models using hybrid filtering.
 FUNCTIONS
     get_users_features_tuple(user)
     get_items_features_tuple(item, categories)
     train_model(df, user_id_col, item_id_col, item_name_col, evaluate)
-        Return the trained model, dataset with user-item interactions, user dictionary
-            and item dictionary.
+        Return the trained model, dataset with user-item interactions,
+            user dictionary and item dictionary.
     evaluate_model(df, user_id_col, item_id_col)
         Return the auc-roc score of the training and testing sets.
 """
@@ -63,8 +63,10 @@ def train_model(
     Returns:
         model_full: the trained model.
         df_interactions: dataframe with user-item interactions.
-        user_dict: user dictionary containing user_id as key and interaction_index as value.
-        item_dict: item dictionary containing item_id as key and item_name as value.
+        user_dict: user dictionary containing user_id as key and
+            interaction_index as value.
+        item_dict: item dictionary containing item_id as key and
+            item_name as value.
         user_feature_map: the feature map of users
         business_feature_map: the feature map of items
     """
@@ -95,7 +97,7 @@ def train_model(
          )
 
     df_users = df.drop_duplicates(user_id_col)
-    #df_users = df[df.duplicated(user_id_col) == False]
+    # df_users = df[df.duplicated(user_id_col) == False]
     users_features = []
     for i in range(len(df_users)):
         users_features.append(get_users_features_tuple(df_users.values[i]))
@@ -103,7 +105,7 @@ def train_model(
         users_features, normalize=False)
 
     items = df.drop_duplicates(item_id_col)
-    #items = df[df.duplicated(item_id_col) == False]
+    # items = df[df.duplicated(item_id_col) == False]
     items_features = []
     for i in range(len(items)):
         items_features.append(get_items_features_tuple(
@@ -165,36 +167,36 @@ def evaluate_model(
         user_features=user_features,  # additional user features
         item_features=item_features
          )
-    
+
     train_users = train.drop_duplicates('user_id')
-    #train_users = train[train.duplicated('user_id') == False]
+    # train_users = train[train.duplicated('user_id') == False]
     train_user_features = []
     for i in range(len(train_users)):
         train_user_features.append(get_users_features_tuple(
             train_users.values[i]))
     train_user_features = ds.build_user_features(
         train_user_features, normalize=False)
-    
+
     test_users = test.drop_duplicates('user_id')
-    #test_users = test[test.duplicated('user_id') == False]
+    # test_users = test[test.duplicated('user_id') == False]
     test_user1_features = []
     for i in range(len(test_users)):
         test_user1_features.append(get_users_features_tuple(
             test_users.values[i]))
     test_user_features = ds.build_user_features(
         test_user1_features, normalize=False)
-    
+
     train_items = train.drop_duplicates('business_id')
-    #train_items = train[train.duplicated('business_id') == False]
+    # train_items = train[train.duplicated('business_id') == False]
     train_item1_features = []
     for i in range(len(train_items)):
         train_item1_features.append(get_items_features_tuple(
             train_items.values[i], categories))
     train_item_features = ds.build_item_features(
         train_item1_features, normalize=False)
-    
+
     test_items = test.drop_duplicates('business_id')
-    #test_items = test[test.duplicated('business_id') == False]
+    # test_items = test[test.duplicated('business_id') == False]
     test_item_features = []
     for i in range(len(test_items)):
         test_item_features.append(get_items_features_tuple(

@@ -32,14 +32,17 @@ from scipy import sparse
 def recommend_hybrid_item(
                          df, model, interactions, item_id,
                          user_dict, item_dict, topn, show=True):
-    """Funnction to produce a list of top N interested users for a given item. Hybrid version of recommend_known_item
+    """Funnction to produce a list of top N interested users for a given item.
+       Hybrid version of recommend_known_item
     Args:
         df: The orginal data frame
         model: Trained matrix factorization model
         interactions: dataset used for training the model
         item_id: item ID for which we need to generate recommended users
-        user_dict: Dictionary type input containing user_id as key and interaction_index as value
-        item_dict: Dictionary type input containing item_id as key and item_name as value
+        user_dict: Dictionary type input containing user_id as key
+            and interaction_index as value
+        item_dict: Dictionary type input containing item_id as key
+            and item_name as value
         topn: Number of users needed as an output
         show: whether to show the result of function
     Returns:
@@ -68,20 +71,25 @@ def recommend_hybrid_user(
                          df, model, interactions, user_id, user_dict,
                          item_dict, topn, new_only=True, threshold=3,
                          show=True):
-    """Function to produce user recommendations. Hybrid version of recommend_known_user
+    """Function to produce user recommendations. Hybrid version of
+        recommend_known_user
     Args:
         model: trained matrix factorization model
         interactions: dataset used for training the model
         user_id: user ID for which we need to generate recommendation
-        user_dict: Dictionary type input containing user_id as key and interaction_index as value
-        item_dict: Dictionary type input containing item_id as key and item_name as value
-        threshold: value above which the rating is favorable in interaction matrix
+        user_dict: Dictionary type input containing user_id as key and
+            interaction_index as value
+        item_dict: Dictionary type input containing item_id as key and
+            item_name as value
+        threshold: value above which the rating is favorable in interaction
+            matrix
         topn: Number of output recommendation needed
         new_only: whether to only recommend items that users have not visited
         show: whether to show the result of function
     Returns:
         Prints list of items the given user has already visited
-        Prints list of N recommended items  which user hopefully will be interested in
+        Prints list of N recommended items  which user hopefully will be
+            interested in
     """
     print('Recommending items for user {}...'.format(user_id))
     n_users, n_items = interactions.shape
@@ -127,8 +135,10 @@ def recommend_hybrid_new_item(
         model: Trained matrix factorization model
         interactions: dataset used for training the model
         item_id: item ID for which we need to generate recommended users
-        user_dict: Dictionary type input containing user_id as key and interaction_index as value
-        item_dict: Dictionary type input containing item_id as key and item_name as value
+        user_dict: Dictionary type input containing user_id as key and
+            interaction_index as value
+        item_dict: Dictionary type input containing item_id as key and
+            item_name as value
         topn: Number of users needed as an output
         show: whether to show the result of function
     Returns:
@@ -163,14 +173,18 @@ def recommend_hybrid_new_user(
         model: trained matrix factorization model
         interactions: dataset used for training the model
         user_id: user ID for which we need to generate recommendation
-        user_dict: Dictionary type input containing user_id as key and interaction_index as value
-        item_dict: Dictionary type input containing item_id as key and item_name as value
-        threshold: value above which the rating is favorable in interaction matrix
+        user_dict: Dictionary type input containing user_id as key and
+            interaction_index as value
+        item_dict: Dictionary type input containing item_id as key and
+            item_name as value
+        threshold: value above which the rating is favorable in interaction
+            matrix
         topn: Number of output recommendation needed
         new_only: whether to only recommend items that users have not visited
         show: whether to show the result of function
     Returns:
-        Prints list of N recommended items  which user hopefully will be interested in
+        Prints list of N recommended items which user hopefully will
+            be interested in
     """
     print('Recommending items for new users')
     n_users, n_items = interactions.shape
