@@ -18,8 +18,10 @@ For business owner, they use this system to find out what kind of user like thei
 
 ## Video overview of code
 Recommendations for known user/item (collaborative filtering)
+
 https://drive.google.com/file/d/1C29OzIHcP1R8YaI03jkBoA14c71E5Twn/view?usp=sharing
 
 Recommendations for know or new user/item (hybrid filtering)
+
 https://www.youtube.com/watch?v=83fH7h-o9zk&feature=youtu.be
 
