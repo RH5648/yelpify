@@ -47,8 +47,8 @@ def prepare_data(raw=False, round_ratings=False):
     if raw:
         # read data
         review = get_input(
-            'https://www.dropbox.com/s/mtln9b6udoydn2h/yelp_academic \
-            _dataset_review_sample.csv?dl=1')
+            'https://www.dropbox.com/s/sj445d95lljuc4p/small_samp \
+            le.parquet?dl=0')
         user = get_input(
             'https://www.dropbox.com/s/pngrptljotqm4ds/yelp_academic \
             _dataset_user.json?dl=1')
