@@ -123,6 +123,7 @@ def prepare_data_features(raw=False, round_ratings=False):
     df_categories = df_categories[df_categories.columns[
         df_categories.sum() > len(df)*0.03]]
     df = pd.concat([df.drop('categories', 1), df_categories], axis=1)
+    print("end prepare features")
     return df
 
 

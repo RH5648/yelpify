@@ -13,7 +13,7 @@ class test_model(unittest.TestCase):
     def test_train_model(self):
         df = prepare_data(raw=False)
         train_model(df, user_id_col='user_id', item_id_col='business_id',
-                    item_name_col='name_business', evaluate=True)
+                    item_name_col='name_business', evaluate=False)
 
     def test_evaluate_model(self):
         df = prepare_data(raw=False)
