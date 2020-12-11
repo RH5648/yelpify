@@ -7,10 +7,18 @@ DESCRIPTION
 FUNCTIONS
     get_input(url)
         Return the dataframe as downloaded from the url.
-    prepare_data()
+
+    prepare_data(raw, round_ratings)
         Return the joined and cleaned dataset.
+
     round_of_rating(number)
         Return the number as rounded to the closest half integer
+
+    prepare_data_features(raw, round_ratings)
+        Prepare data features
+
+    feature_matrix(df, user_id, item_id)
+        Generate feature matrix
 """
 
 import pandas as pd
