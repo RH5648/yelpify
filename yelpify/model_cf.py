@@ -92,6 +92,7 @@ def evaluate_model(df, user_id_col='user_id',
     """
     # model evaluation
     # create test and train datasets
+    print('model evaluation')
     train, test = train_test_split(df, test_size=0.2, stratify=stratify)
     ds = Dataset()
 
