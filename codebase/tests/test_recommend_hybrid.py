@@ -8,7 +8,7 @@ from yelpify.recommend_hybrid import recommend_hybrid_item,\
     recommend_hybrid_user
 from yelpify.data_preparation import prepare_data_features
 
-USER_ID = "qRWzBX1q07ZuPgaTXB_4JA"
+USER_ID = "avXKk5RYsDWeRgkHv1wfGQ"
 ITEM_ID = "VMPSdoBgJuyS9t_x_caTig"
 data_path = os.path.join(codebase.__path__[0], 'data')
 df = prepare_data_features(raw=False)

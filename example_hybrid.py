@@ -6,7 +6,7 @@ from yelpify.recommend_hybrid import recommend_hybrid_new_item
 from yelpify.data_preparation import prepare_data_features
 import numpy as np
 
-USER_ID = "qRWzBX1q07ZuPgaTXB_4JA"
+USER_ID = "avXKk5RYsDWeRgkHv1wfGQ"
 ITEM_ID = "VMPSdoBgJuyS9t_x_caTig"
 
 df = prepare_data_features(raw=False)

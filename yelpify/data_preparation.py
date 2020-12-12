@@ -55,8 +55,8 @@ def prepare_data(raw=False, round_ratings=False):
     if raw:
         # read data
         review = get_input(
-            'https://www.dropbox.com/s/sj445d95lljuc4p/small_samp \
-            le.parquet?dl=0')
+            'https://www.dropbox.com/s/mtln9b6udoydn2h/yelp_academic \
+            _dataset_review_sample.csv?dl=1')
         user = get_input(
             'https://www.dropbox.com/s/pngrptljotqm4ds/yelp_academic \
             _dataset_user.json?dl=1')
@@ -79,7 +79,7 @@ def prepare_data(raw=False, round_ratings=False):
             'categories', 'state', 'city']]
     else:
         review_user_business = get_input(
-            'https://www.dropbox.com/s/0c9zandfdsn4ujj/data_clean.parquet?dl=1'
+            'https://www.dropbox.com/s/sj445d95lljuc4p/small_sample.parquet?dl=1'
             )
     if round_ratings:
         # bucketize numeric features to reduce dimensions
@@ -121,7 +121,7 @@ def prepare_data_features(raw=False, round_ratings=False):
     print("prepare features")
     df_categories = df['categories'].str.get_dummies(sep=", ")
     df_categories = df_categories[df_categories.columns[
-        df_categories.sum() > len(df)*0.03]]
+        df_categories.sum() > len(df)*0.01]]
     df = pd.concat([df.drop('categories', 1), df_categories], axis=1)
     print("end prepare features")
     return df
