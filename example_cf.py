@@ -2,7 +2,7 @@ from yelpify.model_cf import train_model
 from yelpify.recommend_known import recommend_known_item, recommend_known_user
 from yelpify.data_preparation import prepare_data
 
-USER_ID = "qRWzBX1q07ZuPgaTXB_4JA"
+USER_ID = "avXKk5RYsDWeRgkHv1wfGQ"
 ITEM_ID = "VMPSdoBgJuyS9t_x_caTig"
 
 df = prepare_data(raw=False)
