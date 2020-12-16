@@ -41,7 +41,7 @@ For Yelp user, just replace the current USER_ID with your USER_ID and run recomm
 For business own, replace the current ITEM_ID with your BUSINESS_ID and run recommendation_system_hybrid. You will get 10 USER_IDs represent 10 users that may appreciate your business the most.   
 
 ## Environment requirements:
-···
+```
 brotlipy==0.7.0
 certifi==2020.11.8
 cffi==1.14.4
@@ -67,4 +67,4 @@ urllib3==1.25.11
 vim==0.0.1
 win-inet-pton==1.1.0
 wincertstore==0.2
-···
+```
