@@ -39,3 +39,32 @@ For business own, replace the current ITEM_ID with your ITEM_ID and run recommen
 #### If you not sure whether you are in the database or not, you can use recommendation_system_hybird.   
 For Yelp user, just replace the current USER_ID with your USER_ID and run recommendation_system_hybrid. You will get top 10 recommendation restruants/businesses.   
 For business own, replace the current ITEM_ID with your BUSINESS_ID and run recommendation_system_hybrid. You will get 10 USER_IDs represent 10 users that may appreciate your business the most.   
+
+## Environment requirements:
+···
+brotlipy==0.7.0
+certifi==2020.11.8
+cffi==1.14.4
+chardet==3.0.4
+cryptography==3.2.1
+idna==2.10
+joblib==0.17.0
+lightfm==1.15
+numpy==1.19.4
+pandas==1.1.4
+pyarrow==0.15.1
+pycparser==2.20
+pyOpenSSL==20.0.0
+PySocks==1.7.1
+python-dateutil==2.8.1
+pytz==2020.4
+requests==2.25.0
+scikit-learn==0.23.2
+scipy==1.5.3
+six==1.15.0
+threadpoolctl==2.1.0
+urllib3==1.25.11
+vim==0.0.1
+win-inet-pton==1.1.0
+wincertstore==0.2
+···
