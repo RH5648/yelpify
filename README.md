@@ -47,12 +47,13 @@ or
 python recommendation_system_hybrid.py 
 ```
 to run collaborative model or hybrid model.
-#### If this user or item is in the database, you can use recommendation_system_cf.   
+#### If this user or item is in the database, you can use both recommendation_system_cf and recommendation_system_hybird.   
 For Yelp user, just replace the current USER_ID with your USER_ID and run recommendation_system_cf. You will get top 10 recommendation restruants/businesses.   
 For business own, replace the current ITEM_ID with your ITEM_ID and run recommendation_system_cf. You will get 10 USER_IDs represent 10 users that may appreciate your business the most.   
-#### If you not sure whether you are in the database or not, you can use recommendation_system_hybird.   
-For Yelp user, just replace the current USER_ID with your USER_ID and run recommendation_system_hybrid. You will get top 10 recommendation restruants/businesses.   
-For business own, replace the current ITEM_ID with your BUSINESS_ID and run recommendation_system_hybrid. You will get 10 USER_IDs represent 10 users that may appreciate your business the most.   
+#### If you are not in the database, you can use recommendation_system_hybird.   
+You don't have to input USER_ID or ITEM_ID.
+For user, you just need to input a user feature list at new_user_feature. Because we only consider one user feature, which is average star, you only need to enter a list containing one number, such as [x], the value range of x is [0,5]. You will get top 10 recommendation restruants/businesses.   
+For business own, the new_item_feature requires a list contains 89 numbers, these number can be 0 or 1. You will get 10 USER_IDs represent 10 users that may appreciate your business the most.   
 
 ## Environment requirements:
 ```
