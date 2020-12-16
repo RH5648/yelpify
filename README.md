@@ -32,3 +32,10 @@ Recommendations for know or new user/item (hybrid filtering)
 
 https://www.youtube.com/watch?v=83fH7h-o9zk&feature=youtu.be
 
+## Usage of recommendation system
+If this user or item is in the database, you can use recommendation_system_cf. 
+For Yelp user, just replace the current USER_ID with your USER_ID and run recommendation_system_cf. You will get top 10 recommendation restruants/businesses. 
+For business own, replace the current ITEM_ID with your ITEM_ID and run recommendation_system_cf. You will get 10 USER_IDs represent 10 users that may appreciate your business the most. 
+If you not sure whether you are in the database or not, you can use recommendation_system_hybird. 
+For Yelp user, just replace the current USER_ID with your BUSINESS_ID and run recommendation_system_hybrid. You will get top 10 recommendation restruants/businesses. 
+For business own, replace the current ITEM_ID with your BUSINESS_ID and run recommendation_system_hybrid. You will get 10 USER_IDs represent 10 users that may appreciate your business the most. 
