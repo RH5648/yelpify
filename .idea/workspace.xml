@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f08cc03-91c2-48d8-881c-821bb971874c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codebase/tests/test_data_pre.py" beforeDir="false" afterPath="$PROJECT_DIR$/codebase/tests/test_data_pre.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codebase/tests/test_model_cf.py" beforeDir="false" afterPath="$PROJECT_DIR$/codebase/tests/test_model_cf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codebase/tests/test_model_hybrid.py" beforeDir="false" afterPath="$PROJECT_DIR$/codebase/tests/test_model_hybrid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codebase/tests/test_recommend_hybrid.py" beforeDir="false" afterPath="$PROJECT_DIR$/codebase/tests/test_recommend_hybrid.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codebase/tests/test_recommend_known.py" beforeDir="false" afterPath="$PROJECT_DIR$/codebase/tests/test_recommend_known.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/recommendation_system_cf.py" beforeDir="false" afterPath="$PROJECT_DIR$/example/recommendation_system_cf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/recommendation_system_hybrid.py" beforeDir="false" afterPath="$PROJECT_DIR$/example/recommendation_system_hybrid.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

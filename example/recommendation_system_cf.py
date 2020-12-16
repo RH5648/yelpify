@@ -1,3 +1,9 @@
+"""
+NAME
+    recommendation_system_cf
+DESCRIPTION
+    A demo of our recommendation system if this user or item is in the database
+"""
 import sys
 sys.path.append('./')
 

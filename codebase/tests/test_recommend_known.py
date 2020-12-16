@@ -1,6 +1,6 @@
 """
 NAME
-    test_recommend_hybrid
+    test_recommend_known
 DESCRIPTION
     This module test collaborative  recommendation filtering
 FUNCTIONS
