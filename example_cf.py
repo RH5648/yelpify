@@ -23,6 +23,7 @@ rec_list_user = recommend_known_user(
     item_dict=item_dict,
     new_only=False,
     topn=10,
+    threshold=3,
     show=True)
 
 # make recommendation for known businesses
