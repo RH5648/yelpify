@@ -79,7 +79,7 @@ def prepare_data(raw=False, round_ratings=False):
             'categories', 'state', 'city']]
     else:
         review_user_business = get_input(
-            'https://www.dropbox.com/s/0c9zandfdsn4ujj/data_clean.parquet?dl=1'
+            'https://www.dropbox.com/s/sj445d95lljuc4p/small_sample.parquet?dl=1'
             )
     if round_ratings:
         # bucketize numeric features to reduce dimensions
@@ -118,10 +118,12 @@ def prepare_data_features(raw=False, round_ratings=False):
         the modified dataframe.
     """
     df = prepare_data(raw=False)
+    print("prepare features")
     df_categories = df['categories'].str.get_dummies(sep=", ")
     df_categories = df_categories[df_categories.columns[
-        df_categories.sum() > len(df)*0.03]]
+        df_categories.sum() > len(df)*0.01]]
     df = pd.concat([df.drop('categories', 1), df_categories], axis=1)
+    print("end prepare features")
     return df
 
 
@@ -135,6 +137,7 @@ def feature_matrix(df, user_id=None, item_id=None):
         user feature matrix and item features matrix (csr matrix)
         user_x, item_x are index numbers of the input user id and item id
     """
+    print("get feature matrix")
     df1 = df.drop_duplicates(subset=['user_id'], keep='first', inplace=False)
     user_x = None
     if user_id is not None:

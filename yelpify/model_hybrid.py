@@ -148,6 +148,7 @@ def evaluate_model(
     No return value
     """
     # create test and train datasets
+    print('model evaluation')
     train, test = train_test_split(df, test_size=0.2, stratify=stratify)
     ds = Dataset()
     # we call fit to supply userid, item id and user/item features

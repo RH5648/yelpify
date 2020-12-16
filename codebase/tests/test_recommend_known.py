@@ -8,7 +8,7 @@ from yelpify.model_cf import train_model
 from yelpify.recommend_known import recommend_known_user, recommend_known_item
 
 data_path = os.path.join(codebase.__path__[0], 'data')
-USER_ID = "qRWzBX1q07ZuPgaTXB_4JA"
+USER_ID = "avXKk5RYsDWeRgkHv1wfGQ"
 ITEM_ID = "VMPSdoBgJuyS9t_x_caTig"
 
 
