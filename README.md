@@ -32,7 +32,20 @@ Recommendations for know or new user/item (hybrid filtering)
 
 https://www.youtube.com/watch?v=83fH7h-o9zk&feature=youtu.be
 
-## Usage of recommendation system
+## Install and usage of recommendation system
+For installation, you just need to download our code. 
+You are given two examples, recommendation_system_cf.py and recommendation_system_hybrid.py.
+The recommendation_system_cf.py calls the collaborative filter, you can use recommendation_system_cf.py to recommend for known users and items. 
+The recommendation_system_hybrid.py calls the hybrid filter, you can use recommendation_system_hybrid.py to recommend for known and new users / items.
+Use 
+```
+python recommendation_system_cf.py 
+```
+or
+```
+python recommendation_system_hybrid.py 
+```
+to run collaborative model or hybrid model.
 #### If this user or item is in the database, you can use recommendation_system_cf.   
 For Yelp user, just replace the current USER_ID with your USER_ID and run recommendation_system_cf. You will get top 10 recommendation restruants/businesses.   
 For business own, replace the current ITEM_ID with your ITEM_ID and run recommendation_system_cf. You will get 10 USER_IDs represent 10 users that may appreciate your business the most.   
