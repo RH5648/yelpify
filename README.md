@@ -1,15 +1,22 @@
 # Yelpify
 [![Build Status](https://travis-ci.com/RH5648/yelpify.svg?branch=main)](https://travis-ci.com/RH5648/yelpify)
 
-### projects for cse 583
 Group Members: June Yang, Quoc Dung (Daniel) Cao, Runqiu Hu, Zichen Liu
 
 ## Introductrion
-We are building a meal/user recommedation system based on Yelp academic databases.
-The databases we used are review, user, and business.
-Review database has the contents of review, who worte this review (UserID), and which business is this review for (business ID).
-User database covers the demographic information of the user.
-Business database includes rating of businerss and geographic information. 
+We are building a meal/user recommedation system based on Yelp academic databases.  
+The databases we used are review, user, and business.  
+Review database has the contents of review, who worte this review (UserID), and which business is this review for (business ID).  
+User database covers the demographic information of the user.  
+Business database includes rating of businerss and geographic information.  
+
+## Datasets
+The datasets we used is from yelp academic database:  
+https://www.yelp.com/dataset   
+We use three of them, they are review, user, and business.  
+Review database has the contents of review, who wrote this review (user ID), which business review is for (business ID).  
+Users database has the demographic information of the user.  
+Business database has the rating of business and geographic information.  
 
 ## Use cases
 We have two use cases:
