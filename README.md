@@ -37,6 +37,7 @@ For installation, you just need to download our code.
 You are given two examples, recommendation_system_cf.py and recommendation_system_hybrid.py.
 The recommendation_system_cf.py calls the collaborative filter, you can use recommendation_system_cf.py to recommend for known users and items. 
 The recommendation_system_hybrid.py calls the hybrid filter, you can use recommendation_system_hybrid.py to recommend for known and new users / items.
+
 Use 
 ```
 python recommendation_system_cf.py 
