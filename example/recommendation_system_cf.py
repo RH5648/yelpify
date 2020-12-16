@@ -1,3 +1,6 @@
+import sys
+sys.path.append('./')
+
 from yelpify.model_cf import train_model
 from yelpify.recommend_known import recommend_known_item, recommend_known_user
 from yelpify.data_preparation import prepare_data

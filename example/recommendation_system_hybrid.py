@@ -1,3 +1,6 @@
+import sys
+sys.path.append('./')
+
 from yelpify.model_hybrid import train_model
 from yelpify.recommend_hybrid import recommend_hybrid_item
 from yelpify.recommend_hybrid import recommend_hybrid_user
