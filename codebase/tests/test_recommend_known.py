@@ -1,3 +1,17 @@
+"""
+NAME
+    test_recommend_hybrid
+DESCRIPTION
+    This module test collaborative  recommendation filtering
+FUNCTIONS
+    test_recommend_known_user(self)
+        test known user for recommendation system
+        make sure no exceptions
+
+    test_recommend_known_item(self)
+        test known item for recommendation system
+        make sure no exceptions
+"""
 import os
 import unittest
 
@@ -14,7 +28,11 @@ ITEM_ID = "VMPSdoBgJuyS9t_x_caTig"
 
 class TestModel(unittest.TestCase):
 
-    def test_train_model(self):
+    def test_recommend_known_user(self):
+        """
+        Testing recommendation system for user in database
+        smoke test, make sure no exceptions
+        """
         df = prepare_data(raw=False)
         model_full, df_interactions, user_dict, item_dict = train_model(
             df=df,
@@ -32,7 +50,11 @@ class TestModel(unittest.TestCase):
             show=True)
         self.assertEqual(len(rec_list_user), 10)
 
-    def test_evaluate_model(self):
+    def test_recommend_known_item(self):
+        """
+        Testing recommendation system for item in database
+        smoke test, make sure no exceptions
+        """
         df = prepare_data(raw=False)
         model_full, df_interactions, user_dict, item_dict = train_model(
             df=df,

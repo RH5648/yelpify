@@ -1,3 +1,17 @@
+"""
+NAME
+    test_recommend_hybrid
+DESCRIPTION
+    This module test hybrid recommendation filtering
+FUNCTIONS
+    test_hybrid_item(self)
+        test known item for recommendation system
+        make sure no exceptions
+
+    test_hybrid_new_item(self)
+        test new item for recommendation system
+        make sure no exceptions
+"""
 import os
 import unittest
 import numpy as np
@@ -24,6 +38,10 @@ model_full, df_interactions, user_dict, item_dict, \
 class TestModel(unittest.TestCase):
 
     def test_hybrid_item(self):
+        """
+         Testing recommendation system for item in database
+         smoke test, make sure no exceptions
+        """
         rec_list_item = recommend_hybrid_item(
             df=df,
             model=model_full,
@@ -36,6 +54,10 @@ class TestModel(unittest.TestCase):
         self.assertEqual(len(rec_list_item), 10)
 
     def test_hybrid_new_item(self):
+        """
+         Testing recommendation system for item not in database
+         smoke test, make sure no exceptions
+        """
         rec_list_new_item = recommend_hybrid_new_item(
             df=df,
             model=model_full,

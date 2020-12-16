@@ -1,3 +1,17 @@
+"""
+NAME
+    test_model_cf
+DESCRIPTION
+    This module test model data_preparation
+        and generate features as needed.
+FUNCTIONS
+    test_train_model(self)
+        make sure no exceptions during model training
+
+    test_evaluate_model(self)
+        make sure model devaluation has no exceptions
+
+"""
 import os
 import unittest
 
@@ -11,13 +25,20 @@ data_path = os.path.join(codebase.__path__[0], 'data')
 class test_model(unittest.TestCase):
 
     def test_train_model(self):
-        print("test_train_model")
+        """
+        Testing process of training model
+        smoke test, make sure no exceptions
+        training data may take a while
+        """
         df = prepare_data(raw=False)
         train_model(df, user_id_col='user_id', item_id_col='business_id',
                     item_name_col='name_business', evaluate=False)
 
     def test_evaluate_model(self):
-        print("test_evaluate_model")
+        """
+        Testing process of training model
+        smoke test, make sure no exceptions
+        """
         df = prepare_data(raw=False)
         evaluate_model(df, user_id_col='user_id',
                        item_id_col='business_id', stratify=None)
