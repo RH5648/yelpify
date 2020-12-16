@@ -2,11 +2,10 @@
 NAME
     recommendation_system_cf
 DESCRIPTION
-    A demo of our recommendation system if this user or item is not in the database
+    A demo of our recommendation system if this user or item
+    is not in the database
 """
 import sys
-sys.path.append('./')
-
 from yelpify.model_hybrid import train_model
 from yelpify.recommend_hybrid import recommend_hybrid_item
 from yelpify.recommend_hybrid import recommend_hybrid_user
@@ -14,6 +13,7 @@ from yelpify.recommend_hybrid import recommend_hybrid_new_user
 from yelpify.recommend_hybrid import recommend_hybrid_new_item
 from yelpify.data_preparation import prepare_data_features
 import numpy as np
+sys.path.append('./')
 
 USER_ID = "avXKk5RYsDWeRgkHv1wfGQ"
 ITEM_ID = "VMPSdoBgJuyS9t_x_caTig"

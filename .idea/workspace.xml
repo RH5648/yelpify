@@ -20,8 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f08cc03-91c2-48d8-881c-821bb971874c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/codebase/tests/test_recommend_known.py" beforeDir="false" afterPath="$PROJECT_DIR$/codebase/tests/test_recommend_known.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/recommendation_system_cf.py" beforeDir="false" afterPath="$PROJECT_DIR$/example/recommendation_system_cf.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/recommendation_system_hybrid.py" beforeDir="false" afterPath="$PROJECT_DIR$/example/recommendation_system_hybrid.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +53,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_data_pre.py">
+  <component name="RunManager" selected="Python.recommendation_system_hybrid">
     <configuration name="recommendation_system_cf" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="yelpify" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -77,7 +75,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_model_hybrid" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="recommendation_system_hybrid" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="yelpify" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -85,11 +83,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/codebase/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/example" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/codebase/tests/test_model_hybrid.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/example/recommendation_system_hybrid.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -158,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest in test_data_pre.py" />
+        <item itemvalue="Python.recommendation_system_hybrid" />
         <item itemvalue="Python.recommendation_system_cf" />
+        <item itemvalue="Python tests.pytest in test_data_pre.py" />
         <item itemvalue="Python.test_recommend_known" />
         <item itemvalue="Python.test_recommend_hybrid" />
-        <item itemvalue="Python.test_model_hybrid" />
       </list>
     </recent_temporary>
   </component>

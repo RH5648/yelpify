@@ -5,11 +5,10 @@ DESCRIPTION
     A demo of our recommendation system if this user or item is in the database
 """
 import sys
-sys.path.append('./')
-
 from yelpify.model_cf import train_model
 from yelpify.recommend_known import recommend_known_item, recommend_known_user
 from yelpify.data_preparation import prepare_data
+sys.path.append('./')
 
 USER_ID = "avXKk5RYsDWeRgkHv1wfGQ"
 ITEM_ID = "VMPSdoBgJuyS9t_x_caTig"
